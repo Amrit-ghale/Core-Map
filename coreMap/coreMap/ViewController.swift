@@ -13,7 +13,8 @@ import MapKit
 
 class MapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
-  
+  private var locationViewCtrl: LocationViewController!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView.userTrackingMode = .follow
@@ -44,4 +45,14 @@ class MapViewController: UIViewController {
     let annotation = annotationForLocation(location)
     mapView.addAnnotation(annotation)
   }
+    
+    @IBAction func openAddNewLocationScreen(_ sender: Any) {
+        locationViewCtrl = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController
+        
+        locationViewCtrl.modalPresentationStyle = .fullScreen
+//        welcomePageViewCtrl.message = "Enter message"
+        
+        self.present(locationViewCtrl, animated: true, completion: nil)
+    }
+    
 }

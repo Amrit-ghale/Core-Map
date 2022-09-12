@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCEB0028CEB1190085A199 /* LocationViewController.swift */; };
 		B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6051E28CAA51500867C4C /* AppDelegate.swift */; };
 		B6D6052128CAA51500867C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052028CAA51500867C4C /* SceneDelegate.swift */; };
 		B6D6052328CAA51500867C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052228CAA51500867C4C /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66CCEB0028CEB1190085A199 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		B6D6051B28CAA51500867C4C /* coreMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D6051E28CAA51500867C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D6052028CAA51500867C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				B6D6055328CAA7AE00867C4C /* Location.swift */,
 				B6D6055128CAA74300867C4C /* LocationsStorage.swift */,
 				B6D6052428CAA51500867C4C /* Main.storyboard */,
+				66CCEB0028CEB1190085A199 /* LocationViewController.swift */,
 				B6D6052A28CAA51700867C4C /* Assets.xcassets */,
 				B6D6052C28CAA51700867C4C /* LaunchScreen.storyboard */,
 				B6D6052F28CAA51700867C4C /* Info.plist */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */,
 				B6D6055228CAA74300867C4C /* LocationsStorage.swift in Sources */,
 				B6D6052328CAA51500867C4C /* ViewController.swift in Sources */,
 				B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */,
