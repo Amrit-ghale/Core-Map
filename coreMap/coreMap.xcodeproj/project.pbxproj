@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCEB0028CEB1190085A199 /* LocationViewController.swift */; };
+		66E17C7E28D151E7002AE0DF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C7D28D151E7002AE0DF /* Helpers.swift */; };
+		66E17C8028D151F5002AE0DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C7F28D151F5002AE0DF /* Constants.swift */; };
+		66E17C8328D1522C002AE0DF /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C8128D1522C002AE0DF /* Locations.xcdatamodeld */; };
 		B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6051E28CAA51500867C4C /* AppDelegate.swift */; };
 		B6D6052128CAA51500867C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052028CAA51500867C4C /* SceneDelegate.swift */; };
 		B6D6052328CAA51500867C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052228CAA51500867C4C /* ViewController.swift */; };
 		B6D6052628CAA51500867C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D6052428CAA51500867C4C /* Main.storyboard */; };
-		B6D6052928CAA51500867C4C /* coreMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052728CAA51500867C4C /* coreMap.xcdatamodeld */; };
 		B6D6052B28CAA51700867C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D6052A28CAA51700867C4C /* Assets.xcassets */; };
 		B6D6052E28CAA51700867C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D6052C28CAA51700867C4C /* LaunchScreen.storyboard */; };
 		B6D6053928CAA51800867C4C /* coreMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6053828CAA51800867C4C /* coreMapTests.swift */; };
@@ -41,12 +43,14 @@
 
 /* Begin PBXFileReference section */
 		66CCEB0028CEB1190085A199 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		66E17C7D28D151E7002AE0DF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		66E17C7F28D151F5002AE0DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		66E17C8228D1522C002AE0DF /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 		B6D6051B28CAA51500867C4C /* coreMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D6051E28CAA51500867C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D6052028CAA51500867C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B6D6052228CAA51500867C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6D6052528CAA51500867C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B6D6052828CAA51500867C4C /* coreMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreMap.xcdatamodel; sourceTree = "<group>"; };
 		B6D6052A28CAA51700867C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D6052D28CAA51700867C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6D6052F28CAA51700867C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,8 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				B6D6051E28CAA51500867C4C /* AppDelegate.swift */,
+				66E17C7D28D151E7002AE0DF /* Helpers.swift */,
 				B6D6052028CAA51500867C4C /* SceneDelegate.swift */,
 				B6D6052228CAA51500867C4C /* ViewController.swift */,
+				66E17C7F28D151F5002AE0DF /* Constants.swift */,
+				66E17C8128D1522C002AE0DF /* Locations.xcdatamodeld */,
 				B6D6055328CAA7AE00867C4C /* Location.swift */,
 				B6D6055128CAA74300867C4C /* LocationsStorage.swift */,
 				B6D6052428CAA51500867C4C /* Main.storyboard */,
@@ -117,7 +124,6 @@
 				B6D6052A28CAA51700867C4C /* Assets.xcassets */,
 				B6D6052C28CAA51700867C4C /* LaunchScreen.storyboard */,
 				B6D6052F28CAA51700867C4C /* Info.plist */,
-				B6D6052728CAA51500867C4C /* coreMap.xcdatamodeld */,
 			);
 			path = coreMap;
 			sourceTree = "<group>";
@@ -273,10 +279,12 @@
 				66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */,
 				B6D6055228CAA74300867C4C /* LocationsStorage.swift in Sources */,
 				B6D6052328CAA51500867C4C /* ViewController.swift in Sources */,
+				66E17C7E28D151E7002AE0DF /* Helpers.swift in Sources */,
 				B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */,
 				B6D6052128CAA51500867C4C /* SceneDelegate.swift in Sources */,
 				B6D6055428CAA7AE00867C4C /* Location.swift in Sources */,
-				B6D6052928CAA51500867C4C /* coreMap.xcdatamodeld in Sources */,
+				66E17C8328D1522C002AE0DF /* Locations.xcdatamodeld in Sources */,
+				66E17C8028D151F5002AE0DF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,13 +622,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B6D6052728CAA51500867C4C /* coreMap.xcdatamodeld */ = {
+		66E17C8128D1522C002AE0DF /* Locations.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B6D6052828CAA51500867C4C /* coreMap.xcdatamodel */,
+				66E17C8228D1522C002AE0DF /* Locations.xcdatamodel */,
 			);
-			currentVersion = B6D6052828CAA51500867C4C /* coreMap.xcdatamodel */;
-			path = coreMap.xcdatamodeld;
+			currentVersion = 66E17C8228D1522C002AE0DF /* Locations.xcdatamodel */;
+			path = Locations.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
