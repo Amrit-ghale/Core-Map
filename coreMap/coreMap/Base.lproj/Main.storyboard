@@ -71,7 +71,7 @@
         <scene sceneID="bCd-Wl-rE1">
             <objects>
                 <viewController restorationIdentifier="LocationViewController" storyboardIdentifier="LocationViewController" id="Wfy-1u-gFd" customClass="LocationViewController" customModule="coreMap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P2w-bU-7ZZ" customClass="Lo">
+                    <view key="view" contentMode="scaleToFill" id="P2w-bU-7ZZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

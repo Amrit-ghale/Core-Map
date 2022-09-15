@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66236EB028D2DAF20035321F /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66236EAF28D2DAF20035321F /* LocationModel.swift */; };
+		66236EB228D2DC150035321F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66236EB128D2DC150035321F /* Location.swift */; };
 		66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCEB0028CEB1190085A199 /* LocationViewController.swift */; };
-		66E17C7E28D151E7002AE0DF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C7D28D151E7002AE0DF /* Helpers.swift */; };
-		66E17C8028D151F5002AE0DF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C7F28D151F5002AE0DF /* Constants.swift */; };
 		66E17C8328D1522C002AE0DF /* Locations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E17C8128D1522C002AE0DF /* Locations.xcdatamodeld */; };
 		B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6051E28CAA51500867C4C /* AppDelegate.swift */; };
 		B6D6052128CAA51500867C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6052028CAA51500867C4C /* SceneDelegate.swift */; };
@@ -20,8 +20,6 @@
 		B6D6053928CAA51800867C4C /* coreMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6053828CAA51800867C4C /* coreMapTests.swift */; };
 		B6D6054328CAA51800867C4C /* coreMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6054228CAA51800867C4C /* coreMapUITests.swift */; };
 		B6D6054528CAA51800867C4C /* coreMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6054428CAA51800867C4C /* coreMapUITestsLaunchTests.swift */; };
-		B6D6055228CAA74300867C4C /* LocationsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6055128CAA74300867C4C /* LocationsStorage.swift */; };
-		B6D6055428CAA7AE00867C4C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D6055328CAA7AE00867C4C /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66236EAF28D2DAF20035321F /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		66236EB128D2DC150035321F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		66CCEB0028CEB1190085A199 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		66E17C7D28D151E7002AE0DF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		66E17C7F28D151F5002AE0DF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		66E17C8228D1522C002AE0DF /* Locations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations.xcdatamodel; sourceTree = "<group>"; };
 		B6D6051B28CAA51500867C4C /* coreMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coreMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D6051E28CAA51500867C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +57,6 @@
 		B6D6053E28CAA51800867C4C /* coreMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coreMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D6054228CAA51800867C4C /* coreMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreMapUITests.swift; sourceTree = "<group>"; };
 		B6D6054428CAA51800867C4C /* coreMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B6D6055128CAA74300867C4C /* LocationsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsStorage.swift; sourceTree = "<group>"; };
-		B6D6055328CAA7AE00867C4C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66236EAC28D2DA9C0035321F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66CCEB0028CEB1190085A199 /* LocationViewController.swift */,
+				B6D6052228CAA51500867C4C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66236EAD28D2DAA40035321F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66236EAF28D2DAF20035321F /* LocationModel.swift */,
+				66236EB128D2DC150035321F /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66236EAE28D2DAAA0035321F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B6D6051228CAA51500867C4C = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +132,13 @@
 		B6D6051D28CAA51500867C4C /* coreMap */ = {
 			isa = PBXGroup;
 			children = (
+				66236EAD28D2DAA40035321F /* Model */,
+				66236EAE28D2DAAA0035321F /* View */,
+				66236EAC28D2DA9C0035321F /* Controller */,
 				B6D6051E28CAA51500867C4C /* AppDelegate.swift */,
-				66E17C7D28D151E7002AE0DF /* Helpers.swift */,
 				B6D6052028CAA51500867C4C /* SceneDelegate.swift */,
-				B6D6052228CAA51500867C4C /* ViewController.swift */,
-				66E17C7F28D151F5002AE0DF /* Constants.swift */,
 				66E17C8128D1522C002AE0DF /* Locations.xcdatamodeld */,
-				B6D6055328CAA7AE00867C4C /* Location.swift */,
-				B6D6055128CAA74300867C4C /* LocationsStorage.swift */,
 				B6D6052428CAA51500867C4C /* Main.storyboard */,
-				66CCEB0028CEB1190085A199 /* LocationViewController.swift */,
 				B6D6052A28CAA51700867C4C /* Assets.xcassets */,
 				B6D6052C28CAA51700867C4C /* LaunchScreen.storyboard */,
 				B6D6052F28CAA51700867C4C /* Info.plist */,
@@ -277,14 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CCEB0128CEB1190085A199 /* LocationViewController.swift in Sources */,
-				B6D6055228CAA74300867C4C /* LocationsStorage.swift in Sources */,
 				B6D6052328CAA51500867C4C /* ViewController.swift in Sources */,
-				66E17C7E28D151E7002AE0DF /* Helpers.swift in Sources */,
 				B6D6051F28CAA51500867C4C /* AppDelegate.swift in Sources */,
 				B6D6052128CAA51500867C4C /* SceneDelegate.swift in Sources */,
-				B6D6055428CAA7AE00867C4C /* Location.swift in Sources */,
+				66236EB028D2DAF20035321F /* LocationModel.swift in Sources */,
 				66E17C8328D1522C002AE0DF /* Locations.xcdatamodeld in Sources */,
-				66E17C8028D151F5002AE0DF /* Constants.swift in Sources */,
+				66236EB228D2DC150035321F /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

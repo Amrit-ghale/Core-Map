@@ -39,7 +39,7 @@ class LocationViewController:UIViewController, UINavigationControllerDelegate, U
     }
     
     @IBAction func addLocation(_ sender: Any) {
-        var error = validateLocationInput();
+        let error = validateLocationInput();
         
         if(!error.isEmpty) {
             return showAlert(error);
