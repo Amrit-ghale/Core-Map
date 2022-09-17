@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 class LocationViewCell: UITableViewCell {
-
-    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var info: UILabel!
     @IBOutlet weak var date: UILabel!
@@ -26,5 +24,4 @@ class LocationViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

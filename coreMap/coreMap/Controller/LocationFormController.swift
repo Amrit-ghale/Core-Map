@@ -12,16 +12,22 @@ class LocationFormController:UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var selectedImage: UIImageView!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var info: UITextField!
-    @IBOutlet weak var date: UITextField!
+    @IBOutlet weak var date: UITextField?
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var latitude: UITextField!
     @IBOutlet weak var longitude: UITextField!
     
     var i = Int()
     var isUpdate = Bool()
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+//        date.inputView = datePicker
+//        datePicker.datePickerMode = .date
+        date?.text = dateFormatter.string(from: datePicker.date)
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -32,7 +38,7 @@ class LocationFormController:UIViewController, UINavigationControllerDelegate, U
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
-        vc.allowsEditing = true // allows to crop (square a photo)
+//        vc.allowsEditing = true // allows to crop (square a photo)
         present(vc, animated: true)
     }
     
@@ -74,29 +80,37 @@ class LocationFormController:UIViewController, UINavigationControllerDelegate, U
     }
     
     func validateLocationInput() -> String {
-        var err = "";
-        
         if (name.text!.isEmpty && latitude.text!.isEmpty && longitude.text!.isEmpty) {
-            err = "Please enter location name, latitude and longitude";
+            let err = "Please enter location name, latitude and longitude";
+            
+            return err;
         }
         
         if (name.text!.isEmpty) {
-            err = "Please enter location name";
+            let err = "Please enter location name";
+            
+            return err;
         }
         
         if (latitude.text!.isEmpty) {
-            err = "Please enter latitude";
+           let err = "Please enter latitude";
+            
+            return err;
         }
         
         if (longitude.text!.isEmpty) {
-            err = "Please enter longitude"
+            let err = "Please enter longitude";
+            
+            return err;
         }
         
         if (Double(latitude.text!) == nil || Double(longitude.text!) == nil) {
-            err = "Invalid input entered";
+            let err = "Invalid input entered";
+            
+            return err;
         }
         
-        return err;
+        return "";
     }
     
     func showAlert(_ message: String) {
