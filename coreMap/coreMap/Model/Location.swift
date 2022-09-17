@@ -22,5 +22,7 @@ extension Location {
     @NSManaged public var name: String?
     @NSManaged public var info: String?
     @NSManaged public var latitude: String?
+    @NSManaged public var longitude: String?
+    @NSManaged public var date: Date?
+//    @NSManaged public var photo: Data?
 }
-

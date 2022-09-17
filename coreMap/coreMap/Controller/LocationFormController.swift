@@ -8,11 +8,16 @@
 import Foundation
 import UIKit
 
-class LocationViewController:UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class LocationFormController:UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var selectedImage: UIImageView!
-    @IBOutlet weak var locationName: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var info: UITextField!
+    @IBOutlet weak var date: UITextField!
     @IBOutlet weak var latitude: UITextField!
     @IBOutlet weak var longitude: UITextField!
+    
+    var i = Int()
+    var isUpdate = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +49,26 @@ class LocationViewController:UIViewController, UINavigationControllerDelegate, U
         if(!error.isEmpty) {
             return showAlert(error);
         } else {
+            let dic : [String : String] = ["name":name.text! ,"info":info.text!]
+            
+            if(isUpdate){
+                
+                LocationModel.dbmInstance.updateLocationData(data: dic, index: i)
+                
+
+                name.text?.removeAll()
+                info.text?.removeAll()
+                
+            }else{
+            
+            
+            LocationModel.dbmInstance.saveLocationData(data: dic)
+            
+            
+            name.text?.removeAll()
+            info.text?.removeAll()
+            
+            }
             
         }
     }
@@ -51,11 +76,11 @@ class LocationViewController:UIViewController, UINavigationControllerDelegate, U
     func validateLocationInput() -> String {
         var err = "";
         
-        if (locationName.text!.isEmpty && latitude.text!.isEmpty && longitude.text!.isEmpty) {
+        if (name.text!.isEmpty && latitude.text!.isEmpty && longitude.text!.isEmpty) {
             err = "Please enter location name, latitude and longitude";
         }
         
-        if (locationName.text!.isEmpty) {
+        if (name.text!.isEmpty) {
             err = "Please enter location name";
         }
         

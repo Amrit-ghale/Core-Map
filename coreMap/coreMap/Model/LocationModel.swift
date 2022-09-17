@@ -9,15 +9,17 @@ import Foundation
 import CoreData
 import UIKit
 
-class DatabaseModel: NSObject {
-     static let dbmInstance = DatabaseModel() //Singleton Model
+class LocationModel: NSObject {
+     static let dbmInstance = LocationModel() //Singleton Model
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    func savePersonData(data : [String:String]){
-        let person = NSEntityDescription.insertNewObject(forEntityName: "Person", into: context) as! Person
-        person.name = data["name"]
-        person.city = data["city"]
+    func saveLocationData(data : [String:String]){
+        let location = NSEntityDescription.insertNewObject(forEntityName: "Location", into: context) as! Location
+        location.name = data["name"]
+        location.latitude = data["latitude"]
+        location.longitude = data["longitude"]
+        location.info = data["info"]
         
         do{
             try context.save()
@@ -26,24 +28,23 @@ class DatabaseModel: NSObject {
         }
     }
     
-    func getPersonData() -> [Person]{
-        var person = [Person]()
-        let fetchData = NSFetchRequest<NSManagedObject>(entityName: "Person")
+    func getLocationData() -> [Location]{
+        var location = [Location]()
+        let fetchData = NSFetchRequest<NSManagedObject>(entityName: "Location")
         
         do{
-            person = try context.fetch(fetchData) as! [Person]
+            location = try context.fetch(fetchData) as! [Location]
         } catch{
             print("Faild to fetch data")
         }
 
-        return person
+        return location
     }
     
     
-    func deletePersonData(index : Int) {
-        
-        let person = getPersonData()
-        let objectToDelete = person[index] as NSManagedObject
+    func deleteLocationData(index : Int) {
+        let location = getLocationData()
+        let objectToDelete = location[index] as NSManagedObject
          
         context.delete(objectToDelete)
         
@@ -55,12 +56,14 @@ class DatabaseModel: NSObject {
         }
     }
     
-    func updateData(data: [String:String],index : Int){
+    func updateLocationData(data: [String:String],index : Int){
+        let location = getLocationData()
         
-        let person = getPersonData()
-        
-        person[index].name = data["name"]
-        person[index].city = data["city"]
+        location[index].name = data["name"]
+        location[index].latitude = data["latitude"]
+        location[index].longitude = data["longitude"]
+        location[index].info = data["info"]
+//        location[index].date = data["date"]
         
         do{
             try context.save()
