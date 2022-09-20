@@ -9,13 +9,21 @@ import Foundation
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
+    
     @IBOutlet weak var mapView: MKMapView!
     var locationListViewCtrl: LocationListViewController!
+    var locationIndex: Int?
+    var location = Location();
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        location = DatabaseHelper.shared.getLocationFromCoreData(index: locationIndex!)
+        mapView.delegate = self
     }
+
+    
     
     @IBAction func Cancel(_ sender: UIButton) {
         locationListViewCtrl = storyboard?.instantiateViewController(withIdentifier: "LocationListViewontroller") as? LocationListViewController

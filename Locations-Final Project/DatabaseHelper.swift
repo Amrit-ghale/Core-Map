@@ -19,8 +19,7 @@ class DatabaseHelper{
     {
         let location = NSEntityDescription.insertNewObject(forEntityName: "Location", into: context) as! Location
         location.photo = imgData
-        
-        print("----", name, lat, long)
+
         location.name = name
         location.latitude = lat
         location.longitude = long
@@ -29,18 +28,6 @@ class DatabaseHelper{
         }catch{
             print("Error saving Image Data")
         }
-    }
-    
-    func getImageFromCoreData() -> [Location]
-    {
-        var arrLocation = [Location]()
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Location")
-        do{
-            arrLocation = try context.fetch(fetchRequest) as! [Location]
-        }catch{
-            print("Error getting Image")
-        }
-        return arrLocation
     }
     
     func getLocationsFromCoreData() -> [Location] {
@@ -54,5 +41,20 @@ class DatabaseHelper{
         }
         
         return locations
+    }
+    
+    func getLocationFromCoreData(index: Int) -> Location
+    {
+        var arrLocation = [Location]()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Location")
+        
+        do {
+            arrLocation = try context.fetch(fetchRequest) as! [Location]
+            
+        } catch {
+            print("Error getting location")
+        }
+        
+        return arrLocation[index]
     }
 }

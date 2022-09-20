@@ -11,6 +11,8 @@ class LocationCollectionViewController: UIViewController, UICollectionViewDelega
     
     var locations = [Location]();
     var locationFormViewController: LocationFormViewController!
+    var mapViewController: MapViewController!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -70,6 +72,16 @@ class LocationCollectionViewController: UIViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        
+        navigateToMapView(indexPath.item)
+    }
+    
+    func navigateToMapView(_ index: Int) {
+        mapViewController = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController
+        
+        mapViewController.modalPresentationStyle = .fullScreen
+        mapViewController.locationIndex = index
+        self.present(mapViewController, animated: true, completion: nil)
     }
 }
 
