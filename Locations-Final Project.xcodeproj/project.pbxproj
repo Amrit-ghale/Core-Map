@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		6667EB5128D940790050C29E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB5028D940790050C29E /* AppDelegate.swift */; };
 		6667EB5328D940790050C29E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB5228D940790050C29E /* SceneDelegate.swift */; };
-		6667EB5528D940790050C29E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB5428D940790050C29E /* ViewController.swift */; };
+		6667EB5528D940790050C29E /* LocationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB5428D940790050C29E /* LocationFormViewController.swift */; };
 		6667EB5828D940790050C29E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6667EB5628D940790050C29E /* Main.storyboard */; };
 		6667EB5B28D940790050C29E /* Locations_Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB5928D940790050C29E /* Locations_Final_Project.xcdatamodeld */; };
 		6667EB5D28D9407B0050C29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6667EB5C28D9407B0050C29E /* Assets.xcassets */; };
 		6667EB6028D9407B0050C29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6667EB5E28D9407B0050C29E /* LaunchScreen.storyboard */; };
+		6667EB6828D941270050C29E /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB6728D941270050C29E /* DatabaseHelper.swift */; };
+		6667EB6A28D942F50050C29E /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB6928D942F50050C29E /* LocationListViewController.swift */; };
+		6667EB6C28D947360050C29E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB6B28D947360050C29E /* TableViewCell.swift */; };
+		6667EB6E28D948720050C29E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6667EB6D28D948720050C29E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6667EB4D28D940790050C29E /* Locations-Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Locations-Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6667EB5028D940790050C29E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6667EB5228D940790050C29E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6667EB5428D940790050C29E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6667EB5428D940790050C29E /* LocationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFormViewController.swift; sourceTree = "<group>"; };
 		6667EB5728D940790050C29E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6667EB5A28D940790050C29E /* Locations_Final_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Locations_Final_Project.xcdatamodel; sourceTree = "<group>"; };
 		6667EB5C28D9407B0050C29E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6667EB5F28D9407B0050C29E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6667EB6128D9407B0050C29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6667EB6728D941270050C29E /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		6667EB6928D942F50050C29E /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
+		6667EB6B28D947360050C29E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6667EB6D28D948720050C29E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +67,13 @@
 			isa = PBXGroup;
 			children = (
 				6667EB5028D940790050C29E /* AppDelegate.swift */,
+				6667EB6D28D948720050C29E /* MapViewController.swift */,
 				6667EB5228D940790050C29E /* SceneDelegate.swift */,
-				6667EB5428D940790050C29E /* ViewController.swift */,
+				6667EB5428D940790050C29E /* LocationFormViewController.swift */,
+				6667EB6928D942F50050C29E /* LocationListViewController.swift */,
 				6667EB5628D940790050C29E /* Main.storyboard */,
+				6667EB6728D941270050C29E /* DatabaseHelper.swift */,
+				6667EB6B28D947360050C29E /* TableViewCell.swift */,
 				6667EB5C28D9407B0050C29E /* Assets.xcassets */,
 				6667EB5E28D9407B0050C29E /* LaunchScreen.storyboard */,
 				6667EB6128D9407B0050C29E /* Info.plist */,
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6667EB5528D940790050C29E /* ViewController.swift in Sources */,
+				6667EB5528D940790050C29E /* LocationFormViewController.swift in Sources */,
+				6667EB6828D941270050C29E /* DatabaseHelper.swift in Sources */,
 				6667EB5128D940790050C29E /* AppDelegate.swift in Sources */,
 				6667EB5328D940790050C29E /* SceneDelegate.swift in Sources */,
+				6667EB6A28D942F50050C29E /* LocationListViewController.swift in Sources */,
+				6667EB6C28D947360050C29E /* TableViewCell.swift in Sources */,
 				6667EB5B28D940790050C29E /* Locations_Final_Project.xcdatamodeld in Sources */,
+				6667EB6E28D948720050C29E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
